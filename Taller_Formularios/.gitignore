@@ -1,0 +1,15 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Base de datos SQLite (solo para desarrollo local)
+db.sqlite3
+
+# Archivos de entorno
+.env
+
+# Archivos de VSCode/PyCharm
+.vscode/
+.idea/
