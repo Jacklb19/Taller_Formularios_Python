@@ -1,15 +1,19 @@
-# Archivos de Python
+# Python
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
 *.pyd
+*.sqlite3
 
-# Base de datos SQLite (solo para desarrollo local)
+# Django
 db.sqlite3
+/static/
+/media/
 
-# Archivos de entorno
-.env
+# Entornos virtuales
+env/
+venv/
 
-# Archivos de VSCode/PyCharm
+# Archivos de VSCode / IDE
 .vscode/
 .idea/
