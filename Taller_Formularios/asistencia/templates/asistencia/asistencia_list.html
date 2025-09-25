@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Asistencias</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Documento</th>
+      <th>Correo</th>
+      <th>Fecha</th>
+      <th>Ingreso</th>
+      <th>Salida</th>
+      <th>Presente</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for a in asistencias %}
+    <tr>
+      <td>
+        <a href="{% url 'asistencia:detail' a.pk %}">{{ a.nombre_completo }}</a>
+      </td>
+      <td>{{ a.documento }}</td>
+      <td>{{ a.correo_electronico }}</td>
+      <td>{{ a.fecha_asistencia }}</td>
+      <td>{{ a.hora_ingreso }}</td>
+      <td>{{ a.hora_salida }}</td>
+      <td>{{ a.presente }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="7">No hay registros</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
