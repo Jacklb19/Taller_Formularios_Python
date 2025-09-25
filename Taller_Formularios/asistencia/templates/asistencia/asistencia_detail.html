@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Detalle — {{ asistencia.nombre_completo }}</h2>
+<ul>
+  <li>Documento: {{ asistencia.documento }}</li>
+  <li>Correo: {{ asistencia.correo_electronico }}</li>
+  <li>Fecha: {{ asistencia.fecha_asistencia }}</li>
+  <li>Ingreso: {{ asistencia.hora_ingreso }}</li>
+  <li>Salida: {{ asistencia.hora_salida }}</li>
+  <li>Presente: {{ asistencia.presente }}</li>
+  <li>Observaciones: {{ asistencia.observaciones }}</li>
+</ul>
+<a href="{% url 'asistencia:list' %}">Volver</a>
+{% endblock %}
